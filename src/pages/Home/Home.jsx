@@ -1,3 +1,5 @@
+import Contact from "../../Components/Contact";
+import FAQSection from "../../Components/FAQSection";
 import HowWorks from "../../Components/HowWorks";
 
 
@@ -28,6 +30,9 @@ const Home = () => {
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-blue-700 to-transparent"></div>
     </div>
     <HowWorks/>
+     <FAQSection/>
+     <Contact/>
+
         </div>
 
        
