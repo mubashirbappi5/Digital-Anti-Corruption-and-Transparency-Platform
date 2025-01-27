@@ -7,6 +7,7 @@ const Navber = () => {
     const links = <>
     <Link  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" >Home</Link>
     <Link  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" >Dashboard</Link>
+    <Link  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" >Project Tracking</Link>
     <Link  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" >Resources</Link>
     <Link  className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700" >Support</Link>
    
@@ -20,7 +21,7 @@ const Navber = () => {
           <div className="flex items-center justify-between">
             <h2 className='flex gap-2 items-center'>
              
-             <span className="text-lg font-semibold">Transparent BD</span>
+             <span className="text-lg font-semibold ">Transparent BD</span>
             </h2>
 
             {/* Mobile menu button */}
