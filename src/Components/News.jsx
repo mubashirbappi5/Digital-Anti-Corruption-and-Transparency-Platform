@@ -7,11 +7,11 @@ const News = () => {
       <div className="container px-6 py-10 mx-auto">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-            From the blog
+          Latest News & Updates
           </h1>
 
           <p className="max-w-lg mx-auto mt-4 text-gray-500">
-            Salami mustard spice tea fridge authentic Chinese food dish salt tasty liquor. Sweet savory foodtruck pie.
+          Catch up on the latest developments, initiatives, and success stories in the fight against corruption and efforts to promote transparency.
           </p>
         </div>
 
@@ -21,30 +21,29 @@ const News = () => {
             <div className="relative">
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="https://i.ibb.co.com/w4RWXhT/download-16.jpg"
                 alt=""
               />
               <div className="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  src="https://i.ibb.co.com/GQStft7/download-11.png"
                   alt=""
                 />
                 <div className="mx-4">
-                  <h1 className="text-sm text-gray-700 dark:text-gray-200">Tom Hank</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Creative Director</p>
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">Prothom alo</h1>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Newspaper</p>
                 </div>
               </div>
             </div>
             <h1 className="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
-              What do you want to know about UI
+            নিম্নমানের ইভিএম কিনে রাষ্ট্রীয় অর্থ অপচয়ের অভিযোগ খতিয়ে দেখবে দুদক
             </h1>
             <hr className="w-32 my-6 text-blue-500" />
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-              praesentium, alias nam? Tempore
+            নিম্নমানের ইলেকট্রনিক ভোটিং মেশিন (ইভিএম) কিনে রাষ্ট্রের অর্থ অপচয়ের অভিযোগে নির্বাচন কমিশনের প্রধান কার্যালয়ে অভিযান চালিয়েছে দুর্নীতি দমন কমিশন (দুদক)। গতকাল রোববার এ অভিযান চালায় দুদক।
             </p>
-            <a href="#" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
+            <a href="https://www.prothomalo.com/bangladesh/1ggtcs1z6j" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
               Read more
             </a>
           </div>
@@ -54,30 +53,29 @@ const News = () => {
             <div className="relative">
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="https://i.ibb.co.com/Bsbg6V0/download-17.jpg"
                 alt=""
               />
               <div className="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  src="https://i.ibb.co.com/YBzPynG/download-12.png"
                   alt=""
                 />
                 <div className="mx-4">
-                  <h1 className="text-sm text-gray-700 dark:text-gray-200">Arthur Melo</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Creative Director</p>
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">Amader Somoy</h1>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Newspaper</p>
                 </div>
               </div>
             </div>
             <h1 className="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
-              All the features you want to know
+            সাবেক আইজিপি বেনজীরের সাভানা রিসোর্টে অভিযান চলছে
             </h1>
             <hr className="w-32 my-6 text-blue-500" />
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-              praesentium, alias nam? Tempore
+            পুলিশের সাবেক মহাপরিদর্শক (আইজিপি) বেনজীর আহমেদের গোপালগঞ্জের সাভানা রিসোর্টে অভিযানে গেছে জাতীয় রাজস্ব বোর্ডের (এনবিআর) গোয়েন্দা বিভাগ (সিআইসি)।
             </p>
-            <a href="#" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
+            <a href="https://www.dainikamadershomoy.com/details/019487b64e9b" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
               Read more
             </a>
           </div>
@@ -87,30 +85,29 @@ const News = () => {
             <div className="relative">
               <img
                 className="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                src="https://i.ibb.co.com/PTCdmd9/download-15.jpg"
                 alt=""
               />
               <div className="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
                 <img
                   className="object-cover object-center w-10 h-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                  src="https://i.ibb.co.com/Gs9bPDC/download-13.png"
                   alt=""
                 />
                 <div className="mx-4">
-                  <h1 className="text-sm text-gray-700 dark:text-gray-200">Amelia Anderson</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Lead Developer</p>
+                  <h1 className="text-sm text-gray-700 dark:text-gray-200">ITTEFAQ</h1>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Newspaper</p>
                 </div>
               </div>
             </div>
             <h1 className="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
-              Which services you get from Meraki UI
+            তারিক সিদ্দিকসহ ১৯ জনের বিরুদ্ধে দুদকের মামলা
             </h1>
             <hr className="w-32 my-6 text-blue-500" />
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-              praesentium, alias nam? Tempore
+            হযরত শাহজালাল আন্তর্জাতিক বিমানবন্দর, সিলেটের ওসমানী আন্তর্জাতিক বিমানবন্দর ও কক্সবাজার আন্তর্জাতিক বিমানবন্দরের উন্নয়ন প্রকল্পের ৮১২ কোটি টাকা আত্মসাতের অভিযোগে সাবেক প্রধানমন্ত্রী শেখ হাসিনার সামরিক উপদেষ্টা মেজর জেনারেল তারিক আহমেদ সিদ্দিকসহ ১৯ কর্মকর্তার বিরুদ্ধে চারটি মামলা দায়ের করেছে দুর্নীতি দমন কমিশন (দুদক)।
             </p>
-            <a href="#" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
+            <a href="https://www.ittefaq.com.bd/716993/%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%95-%E0%A6%B8%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%95%E0%A6%B8%E0%A6%B9-%E0%A7%A7%E0%A7%AF-%E0%A6%9C%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%A6%E0%A7%8D%E0%A6%A7%E0%A7%87-%E0%A6%A6%E0%A7%81%E0%A6%A6%E0%A6%95%E0%A7%87%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%B2%E0%A6%BE" className="inline-block mt-4 text-blue-500 underline hover:text-blue-400">
               Read more
             </a>
           </div>
