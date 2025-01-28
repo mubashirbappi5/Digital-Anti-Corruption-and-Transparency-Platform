@@ -34,9 +34,9 @@ const Home = () => {
     <HowWorks/>
     <RealTimeStat/>
      <FAQSection/>
-     <Contact/>
+     
      <News/>
-
+     <Contact/>
         </div>
 
        
