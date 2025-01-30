@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 
 const Navber = () => {
@@ -79,7 +79,7 @@ const Navber = () => {
             </div>
 
             <div className="flex items-center  mt-4 gap-2 lg:mt-0">
-           <button className="btn bg-[#22C55E] text-white hover:bg-[#52946a] border-none">Report Corruption</button>    
+           <Link to={'/reportCorruption'} className="btn bg-[#22C55E] text-white hover:bg-[#52946a] border-none">Report Corruption</Link>    
 
              
             </div>

@@ -3,17 +3,13 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="bg-white dark:bg-gray-900">
+            <footer className="bg-white dark:bg-gray-900 mt-10">
       <div className="container p-6 mx-auto">
         <div className="lg:flex">
         
           <div className="w-full lg:w-2/5 px-6">
             <a href="#" aria-label="Brand Logo">
-              <img
-                className="w-auto h-8"
-                src="https://merakiui.com/images/full-logo.svg"
-                alt="Brand Logo"
-              />
+           <span className=' font-bold text-3xl'>Transparent BD</span>
             </a>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-sm">
               Join 31,000+ others and never miss out on new tips, tutorials, and more.

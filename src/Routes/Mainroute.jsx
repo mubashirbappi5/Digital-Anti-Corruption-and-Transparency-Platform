@@ -5,6 +5,7 @@ import {
   } from "react-router-dom";
 import Root from "../Layouts/Root";
 import Home from "../pages/Home/Home";
+import ReportCorruption from "../pages/ReportCorruption/ReportCorruption";
 
 const Mainroute = createBrowserRouter([
     {
@@ -13,7 +14,12 @@ const Mainroute = createBrowserRouter([
       children:[{
         path: "/",
         element:<Home></Home>
-      }]
+      },
+    {
+      path:'/reportCorruption',
+      element:<ReportCorruption/>
+    }
+    ]
     },
 
   ]);
