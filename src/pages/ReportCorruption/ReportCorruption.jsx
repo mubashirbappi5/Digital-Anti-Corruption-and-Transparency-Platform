@@ -1,38 +1,11 @@
 import { useState } from "react";
 
 const ReportCorruption = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    corruptionType: "",
-    description: "",
-    date: "",
-    location: "",
-    file: null,
-    anonymous: false,
-  });
+ 
 
-  const [trackingID, setTrackingID] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, file: e.target.files[0] });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const generatedID = "TRK" + Math.floor(Math.random() * 100000);
-    setTrackingID(generatedID);
-    setSubmitted(true);
-  };
+  
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg dark:bg-gray-800">
