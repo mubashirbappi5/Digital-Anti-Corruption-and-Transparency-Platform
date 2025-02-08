@@ -9,6 +9,7 @@ import ReportCorruption from "../pages/ReportCorruption/ReportCorruption";
 import Support from "../pages/Support/Support";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import About from "../pages/About/About";
+import Login from "../pages/Auth/Login/Login";
 
 const Mainroute = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const Mainroute = createBrowserRouter([
     {
       path:'/about',
       element:<About/>
+    },
+    {
+      path:'/login',
+      element:<Login/>
     }
     ]
     },
