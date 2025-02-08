@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import ReportCorruption from "../pages/ReportCorruption/ReportCorruption";
 import Support from "../pages/Support/Support";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import About from "../pages/About/About";
 
 const Mainroute = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const Mainroute = createBrowserRouter([
     {
       path:'/dashboard',
       element:<Dashboard/>
+    },
+    {
+      path:'/about',
+      element:<About/>
     }
     ]
     },
