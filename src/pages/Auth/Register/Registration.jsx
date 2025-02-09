@@ -1,4 +1,6 @@
 import React from "react";
+import SocialLogin from "../SocialLogin/SocialLogin";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
 
@@ -10,7 +12,7 @@ const Registration = () => {
     const email=form.email.value;
     const phone=form.phone.value;
     const password=form.email.value;
-    const user=[name,email,phone,password];
+    const user={name,email,phone,password};
     console.log(user);
     form.reset();
 
@@ -59,7 +61,10 @@ const Registration = () => {
                 value={"Sign UP"}
               />
             </form>
+            <p className="text-center">Don't have an account yet?<Link className="text-blue-400" to={'/login'}>Login</Link></p>
           </div>
+          
+          <SocialLogin/>
         </div>
       </div>
     </div>
