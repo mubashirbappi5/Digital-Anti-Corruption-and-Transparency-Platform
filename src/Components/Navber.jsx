@@ -81,7 +81,7 @@ const Navber = () => {
 
             <div className="flex items-center  mt-4 gap-2 lg:mt-0">
           {
-            user?  <Link to={'/reportCorruption'} className="btn bg-[#4ed37f] text-white hover:bg-[#22C55E] border-none">Report Corruption</Link>    : <Link to={'/login'} className="btn bg-blue-200">Login</Link>
+            user?  <Link to={'/signup'} className="btn bg-[#4ed37f] text-white hover:bg-[#22C55E] border-none">Report Corruption</Link>    : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
           }
 
              

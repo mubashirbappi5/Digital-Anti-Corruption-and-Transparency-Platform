@@ -10,6 +10,7 @@ import Support from "../pages/Support/Support";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import About from "../pages/About/About";
 import Login from "../pages/Auth/Login/Login";
+import Registration from "../pages/Auth/Register/Registration";
 
 const Mainroute = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const Mainroute = createBrowserRouter([
     {
       path:'/login',
       element:<Login/>
+    },
+    {
+      path:'/signup',
+      element:<Registration/>
     }
     ]
     },
