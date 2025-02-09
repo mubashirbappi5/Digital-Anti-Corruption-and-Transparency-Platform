@@ -5,6 +5,7 @@ const Registration = () => {
         e.preventDefault();
         const form = e.target
         console.log(form)
+        
     }
     return (
         <div>
