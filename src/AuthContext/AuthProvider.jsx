@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { createContext } from 'react';
 import { auth } from '../Firebace/Firebace.init';
 export const Authcontext = createContext()
@@ -16,7 +16,7 @@ const AuthProvider = ({children}) => {
     const userSignIn = (email,password)=>{
         return signInWithEmailAndPassword(auth, email, password)
     }
-    
+
 
     const authinfo = {
         name:'bappi',
