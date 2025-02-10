@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../../../AuthContext/AuthProvider";
 
 const Registration = () => {
-
+  const {userSignUp}=useContext(Authcontext)
     const handleregister = (e)=>{
         e.preventDefault();
         const form = e.target
@@ -14,6 +15,14 @@ const Registration = () => {
     const password=form.email.value;
     const user={name,email,phone,password};
     console.log(user);
+       userSignUp(email,password)
+       .then(res=>{
+        console.log(res.user)
+       })
+       .catch(error=>{
+        console.log(error)
+       })
+
     form.reset();
 
   };
