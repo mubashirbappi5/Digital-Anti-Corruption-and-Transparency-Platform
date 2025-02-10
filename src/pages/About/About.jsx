@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Authcontext } from '../../AuthContext/AuthProvider';
-import bgImage from '../../assets/anti.jpg'
+import bgImage from '../../assets/digital.webp'
 const About = () => { 
   const {name} = useContext(Authcontext)
         return (
