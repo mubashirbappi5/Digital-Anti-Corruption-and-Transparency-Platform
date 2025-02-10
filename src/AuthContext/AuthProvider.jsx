@@ -13,11 +13,16 @@ const AuthProvider = ({children}) => {
     const userSignUp = (email,password)=>{
         return createUserWithEmailAndPassword(auth,email,password)
     }
+    const userSignIn = (email,password)=>{
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    
 
     const authinfo = {
         name:'bappi',
         googlesignin,
         userSignUp,
+        userSignIn,
 
     }
     return (
