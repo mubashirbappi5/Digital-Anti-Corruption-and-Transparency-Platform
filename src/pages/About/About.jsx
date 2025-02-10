@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Authcontext } from '../../AuthContext/AuthProvider';
 
-const About = () => {
+const About = () => { 
+  const {name} = useContext(Authcontext)
         return (
           <section className="bg-gray-100 py-16 px-6 text-gray-800">
             <div className="max-w-5xl mx-auto text-center">
