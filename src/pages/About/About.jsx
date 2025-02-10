@@ -1,15 +1,13 @@
 import React, { useContext } from 'react';
 import { Authcontext } from '../../AuthContext/AuthProvider';
-
+import bgImage from '../../assets/anti.jpg'
 const About = () => { 
   const {name} = useContext(Authcontext)
         return (
-          <section className="bg-gray-100 py-16 px-6 text-gray-800">
+          <section className="bg-gray-100 py-16 px-6 text-gray-800 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgImage})` }}>
             <div className="max-w-5xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-blue-600">স্বচ্ছতা ও জবাবদিহিতার ডিজিটাল সমাধান</h2>
-              <p className="mt-4 text-lg">
-                প্রযুক্তির মাধ্যমে দুর্নীতি দমন ও স্বচ্ছ প্রশাসন নিশ্চিত করতে আমাদের প্ল্যাটফর্ম ব্যবহার করুন।
-              </p>
+              <h2 className="text-3xl font-bold text-blue-600 mb-12">স্বচ্ছতা ও দুর্নীতির বিরুদ্ধে আমাদের প্রতিশ্রুতি</h2>
             </div>
       
             <div className="max-w-6xl mx-auto mt-12 grid md:grid-cols-2 gap-8">

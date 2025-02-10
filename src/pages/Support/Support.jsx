@@ -1,11 +1,11 @@
 import React from 'react';
+import FAQSection from '../../Components/FAQSection';
 
 const Support = () => {
     return (
         <div className='min-h-screen'>
-            <h1>this is support section</h1>
-            
-            
+                        
+            <FAQSection></FAQSection>
         </div>
     );
 };
