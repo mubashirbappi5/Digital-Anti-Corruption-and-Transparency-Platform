@@ -93,7 +93,7 @@ const Navber = () => {
             <div className="flex items-center  mt-4 gap-2 lg:mt-0">
               
           {
-            user?  <div><h1 className="font-semibold text-lg">{user.displayName}</h1>
+            user?  <div><h1 className="font-semibold text-lg">{user?.displayName}</h1>
             <button onClick={handleLogOut} className="btn">Log OUT</button></div>    : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
           }
 
