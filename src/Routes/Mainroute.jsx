@@ -41,7 +41,7 @@ const Mainroute = createBrowserRouter([
       element:<Login/>
     },
     {
-      path:'/signup',
+     path:'/signup',
       element:<Registration/>
     }
     ]
