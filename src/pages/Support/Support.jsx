@@ -1,11 +1,13 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaUsers, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";// Import the FAQ section
+import { FaPhone, FaEnvelope,FaUsers, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 import FAQSection from "../../Components/FAQSection";
 
 const Support = () => {
   return (
     <div className="bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
-    <section className="text-center py-20 bg-blue-600 text-white">
+    <section className="text-center py-20 bg-blue-500 text-white">
         <h1 className="text-5xl font-bold">Support & Assistance</h1>
         <p className="mt-4 text-lg">We are here to help you in the fight against corruption.</p>
       </section>
@@ -25,7 +27,7 @@ const Support = () => {
           </div>
 
           <div className="p-6 bg-white shadow-lg rounded-lg text-center">
-            <FaEnvelope className="text-blue-600 text-4xl mx-auto" />
+            <MdEmail className="text-blue-400 text-4xl mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Email Us</h3>
             <p className="mt-2 text-gray-600">Send us your queries, and we'll get back to you.</p>
             <p className="font-bold text-blue-600 mt-2">support@anticorruption.com</p>
