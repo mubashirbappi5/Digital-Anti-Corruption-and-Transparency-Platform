@@ -93,8 +93,11 @@ const Navber = () => {
             <div className="flex items-center  mt-4 gap-2 lg:mt-0">
               
           {
-            user?  <div><h1 className="font-semibold text-lg">{user?.displayName}</h1>
-            <button onClick={handleLogOut} className="btn">Log OUT</button></div>    : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
+            user?  <div>
+            {/* <button onClick={handleLogOut} className="">Log OUT</button> */}
+            <Link to={'/reportCorruption'} className="btn bg-green-200">Report</Link>
+            </div>
+                : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
           }
 
              
