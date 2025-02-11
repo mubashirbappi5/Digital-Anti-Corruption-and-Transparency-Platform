@@ -23,7 +23,7 @@ const Support = () => {
             <FaPhone className="text-blue-600 text-4xl mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Contact Support</h3>
             <p className="mt-2 text-gray-600">Reach us via phone for immediate assistance.</p>
-            <p className="font-bold text-blue-600 mt-2">+123 456 7890</p>
+            <p className="font-bold text-blue-600 mt-2">+88 01304-186131 <br />+88 01851-516736 </p>
           </div>
 
           <div className="p-6 bg-white shadow-lg rounded-lg text-center">
