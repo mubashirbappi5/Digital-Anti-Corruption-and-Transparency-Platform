@@ -5,7 +5,7 @@ const HowWorks = () => {
         <div>
              <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl font-bold text-blue-600 text-center mb-12">
           Making Governance Transparent and Accountable
         </h2>
 

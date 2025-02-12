@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaUsers,
-  FaShieldAlt,
-} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaUsers, FaShieldAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { VscReport } from "react-icons/vsc";
 import FAQSection from "../../Components/FAQSection";
@@ -14,7 +9,9 @@ const Support = () => {
     <div className="bg-gradient-to-b from-blue-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-200">
       {/* Hero Section */}
       <section className="relative text-center py-24 bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-lg">
-        <h1 className="text-5xl font-extrabold drop-shadow-lg">Support & Assistance</h1>
+        <h1 className="text-5xl font-extrabold drop-shadow-lg">
+          Support & Assistance
+        </h1>
         <p className="mt-4 text-lg max-w-3xl mx-auto drop-shadow-md">
           We are here to help you in the fight against corruption.
         </p>
@@ -35,7 +32,9 @@ const Support = () => {
           <div className="support-card">
             <FaPhone className="text-blue-600 text-4xl mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Contact Support</h3>
-            <p className="mt-2 text-gray-600">Reach us via phone for immediate assistance.</p>
+            <p className="mt-2 text-gray-600">
+              Reach us via phone for immediate assistance.
+            </p>
             <p className="font-bold text-blue-600 mt-2">
               +88 01304-186131 <br /> +88 01851-516736
             </p>
@@ -45,15 +44,21 @@ const Support = () => {
           <div className="support-card">
             <MdEmail className="text-blue-400 text-4xl mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Email Us</h3>
-            <p className="mt-2 text-gray-600">Send us your queries, and we'll get back to you.</p>
-            <p className="font-bold text-blue-600 mt-2">support@anticorruption.com</p>
+            <p className="mt-2 text-gray-600">
+              Send us your queries, and we'll get back to you.
+            </p>
+            <p className="font-bold text-blue-600 mt-2">
+              support@anticorruption.com
+            </p>
           </div>
 
           {/* Community Support */}
           <div className="support-card">
             <FaUsers className="text-blue-600 text-4xl mx-auto" />
             <h3 className="text-xl font-semibold mt-4">Community Support</h3>
-            <p className="mt-2 text-gray-600">Join discussions and collaborate with activists.</p>
+            <p className="mt-2 text-gray-600">
+              Join discussions and collaborate with activists.
+            </p>
             <button className="btn-primary mt-4">Join Now</button>
           </div>
 
@@ -73,22 +78,23 @@ const Support = () => {
       <section className="py-16 px-6 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-5xl mx-auto text-center">
           <FaShieldAlt className="text-blue-600 text-5xl mx-auto" />
-          <h2 className="text-4xl font-bold text-blue-600 mt-4">Report an Issue</h2>
+          <h2 className="text-4xl font-bold text-blue-600 mt-4">
+            Report an Issue
+          </h2>
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            If you have witnessed corruption, report it securely and anonymously.
+            If you have witnessed corruption, report it securely and
+            anonymously.
           </p>
           <button className="btn-primary mt-6">Report Now</button>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-10 px-6">
-        <div className="max-w-5xl mx-auto">
-          <FAQSection />
-        </div>
+      <section className="py-10 ">
+        <FAQSection />
       </section>
 
-      Custom Styles
+      {/* Custom Styles */}
       <style jsx>{`
         .support-card {
           background: rgba(255, 255, 255, 0.15);

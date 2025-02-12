@@ -1,11 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import Contact from "../../Components/Contact";
 import FAQSection from "../../Components/FAQSection";
 import HowWorks from "../../Components/HowWorks";
 import News from "../../Components/News";
 import RealTimeStat from "../../Components/RealTimeStat";
+import EmergencyCon from "../../Components/EmergencyCon";
 
 
 const Home = () => {
+  const  navigate= useNavigate(); 
+
     return (
         <div>
             <div className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white py-20 px-8">
@@ -20,10 +24,10 @@ const Home = () => {
           Accountability.
         </p>
         <div className="flex justify-center gap-4">
-          <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
-            Track Projects
+          <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition" onClick={() => navigate("/feed")}>
+            See Corruption
           </button>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition">
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition" onClick={() => navigate("/reportCorruption")}>
             Report Corruption
           </button>
         </div>
@@ -37,6 +41,7 @@ const Home = () => {
      
      <News/>
      <Contact/>
+     <EmergencyCon></EmergencyCon>
         </div>
 
        

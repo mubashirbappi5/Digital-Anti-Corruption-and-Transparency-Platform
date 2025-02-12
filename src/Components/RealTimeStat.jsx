@@ -4,8 +4,8 @@ import Marquee from "react-fast-marquee";
 const RealTimeStat = () => {
   return (
     <div className="relative my-10">
-      <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-6">
-        🔍 Real-Time Transparency Stats
+      <h2 className="text-4xl font-bold text-blue-600 text-center mb-6">
+         Real-Time Transparency Stats
       </h2>
 
       {/* Animated Background */}
