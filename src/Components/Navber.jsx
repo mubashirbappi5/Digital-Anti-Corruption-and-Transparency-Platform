@@ -5,15 +5,7 @@ import { Authcontext } from "../AuthContext/AuthProvider";
 const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, signOutUser } = useContext(Authcontext);
- const handleLogOut = ()=>{
-  signOutUser()
-  .then(res=>{
-
-  })
-  .catch(error=>{
-
-  })
- }
+ 
   
  
   const links = (
@@ -124,7 +116,7 @@ const Navber = () => {
               
           {
             user?  <div>
-            {/* <button onClick={handleLogOut} className="">Log OUT</button> */}
+           
             <Link to={'/reportCorruption'} className="btn bg-green-200">Report Crime</Link>
 
             </div>

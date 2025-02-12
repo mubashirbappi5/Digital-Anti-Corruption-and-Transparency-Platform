@@ -23,9 +23,17 @@ const Feed = () => {
         <div>
             <h1>Total Corruption Posts: {corruptionPost.length}</h1>
             {/* Optionally display posts */}
-            <ul>
-                {corruptionPost.map((post, index) => <FeedCard post={post}/>)}
-            </ul>
+            <section className='grid grid-cols-12'>
+                <div className='col-span-3'>
+
+                </div>
+               <div className='col-span-6'>
+               {corruptionPost.map((post, index) => <FeedCard post={post}/>)}
+               </div>
+               <div className='col-span-3'>
+
+               </div>
+            </section>
         </div>
     );
 };

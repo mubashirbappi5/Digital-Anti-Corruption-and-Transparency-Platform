@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import { auth } from '../Firebace/Firebace.init';
 export const Authcontext = createContext()
@@ -19,6 +19,8 @@ const AuthProvider = ({children}) => {
     const updateuser = (profile) => {
         return updateProfile(auth.currentUser, profile);
       };
+
+      
 
       const resendVerificationEmail = async () => {
         if (auth.currentUser) {
