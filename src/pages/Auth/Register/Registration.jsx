@@ -2,23 +2,28 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import regiser from "../../../assets/register/Register.png";
+import useAuth from "../../../Hooks/useAuth";
+import SocialLogin from './../SocialLogin/SocialLogin';
 const Register = () => {
-  const [user, setUser] = useState({ email: "", password: "", phone: "" });
-  const navigate = useNavigate();
+  const {userSignUp} = useAuth()
 
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:7000/register", user);
-      alert(res.data.message);
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-    }
+
+    const form = e.target 
+    const email = form.email.value
+    const password = form.password.value
+    console.log(email,password)
+    userSignUp(email,password)
+    .then(res=>{
+      console.log(res.user)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+
+    
   };
 
   return (
@@ -34,7 +39,7 @@ const Register = () => {
             type="email"
             name="email"
             placeholder="Email"
-            onChange={handleChange}
+         
             className="input"
             required
           />
@@ -43,22 +48,14 @@ const Register = () => {
             type="password"
             name="password"
             placeholder="Password"
-            onChange={handleChange}
+            
             className="input"
             required
           />
-          <label className="fieldset-label">Phone</label>
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone Number"
-            onChange={handleChange}
-            className="input"
-            required
-          />
-          <button type="submit" className="btn bg-blue-400 mt-4">
-            Register
-          </button>
+          
+          <input value={'submit'} type="submit" className="btn bg-blue-400 mt-4"/>
+            
+         
         </form>
         <p className="px-6 text-sm text-center dark:text-gray-400">
           {" "}
@@ -67,6 +64,7 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <SocialLogin/>
       </div>
     </section>
   );
