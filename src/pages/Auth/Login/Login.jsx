@@ -1,63 +1,35 @@
-import React, { useContext } from "react";
-import { Authcontext } from "../../../AuthContext/AuthProvider";
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const { userSignIn } = useContext(Authcontext);
-  const handlelogin = (e) => {
+  const [user, setUser] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
-    console.log(form);
-
-    const email = form.email.value;
-
-    const password = form.password.value;
-    userSignIn(email, password)
-      .then((res) => {
-        console.log(res.user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      const res = await axios.post("http://localhost:7000/login", user);
+      localStorage.setItem("token", res.data.token);
+      alert("Login successful!");
+      navigate("/dashboard");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <form onSubmit={handlelogin} className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="email"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="password"
-              className="input input-bordered"
-              required
-            />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
-          </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
-          </div>
-        </form>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h2 className="text-2xl font-bold mb-4">Login</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+        <input type="email" name="email" placeholder="Email" onChange={handleChange} className="border p-2" required />
+        <input type="password" name="password" placeholder="Password" onChange={handleChange} className="border p-2" required />
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2">Login</button>
+      </form>
     </div>
   );
 };

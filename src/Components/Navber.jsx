@@ -94,8 +94,9 @@ const Navber = () => {
               
           {
             user?  <div>
-            {/* <button onClick={handleLogOut} className="">Log OUT</button> */}
+            <button onClick={handleLogOut} className="">Log OUT</button>
             <Link to={'/reportCorruption'} className="btn bg-green-200">Report</Link>
+
             </div>
                 : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
           }

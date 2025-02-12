@@ -1,93 +1,37 @@
-import React, { useContext } from "react";
-import SocialLogin from "../SocialLogin/SocialLogin";
-import { Link } from "react-router-dom";
-import { Authcontext } from "../../../AuthContext/AuthProvider";
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const Registration = () => {
-  const {userSignUp, updateuser}=useContext(Authcontext)
-    const handleregister = (e)=>{
-        e.preventDefault();
-        const form = e.target
-        console.log(form)
-    const name=form.name.value;
-    const email=form.email.value;
-    const phone=form.phone.value;
-    const password=form.email.value;
-    const user={name,email,phone,password};
-    console.log(user);
-       userSignUp(email,password)
-       .then(res=>{
-        console.log(res.user)
-        const profile = {
-          displayName:name
-        }
-        updateuser(profile)
-        .then(res=>{
-          console.log(res.user)
-        })
-        .catch(error=>{
-          console.log(error)
-        })
-       })
-       .catch(error=>{
-        console.log(error)
-       })
+const Register = () => {
+  const [user, setUser] = useState({ email: "", password: "", phone: "" });
+  const navigate = useNavigate();
 
-    form.reset();
-
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:7000/register", user);
+      alert(res.data.message);
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center">Create Your Account</h1>
-      <div className="flex justify-center items-start my-10">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 ">
-          <div className="card-body">
-            <form onSubmit={handleregister} className="fieldset">
-              <label className="fieldset-label">Name</label>
-              <input
-                type="name"
-                name="name"
-                className="input"
-                placeholder="Full Name"
-              />
-              <label className="fieldset-label">Email</label>
-              <input
-                type="email"
-                name="email"
-                className="input"
-                placeholder="Email"
-              />
-              <label className="fieldset-label">Phone</label>
-              <input
-                type="phone"
-                name="phone"
-                className="input"
-                placeholder="Phone"
-              />
-              <label className="fieldset-label">Password</label>
-              <input
-                type="password"
-                name="password"
-                className="input"
-                placeholder="Password"
-              />
-              <div>
-                <a className="link link-hover">Forgot password?</a>
-              </div>
-              <input
-                className="btn btn-neutral mt-4"
-                type="submit"
-                value={"Sign UP"}
-              />
-            </form>
-            <p className="text-center">Don't have an account yet?<Link className="text-blue-400" to={'/login'}>Login</Link></p>
-          </div>
-          
-          <SocialLogin/>
-        </div>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h2 className="text-2xl font-bold mb-4">Register</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+        <input type="email" name="email" placeholder="Email" onChange={handleChange} className="border p-2" required />
+        <input type="password" name="password" placeholder="Password" onChange={handleChange} className="border p-2" required />
+        <input type="text" name="phone" placeholder="Phone Number" onChange={handleChange} className="border p-2" required />
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2">Register</button>
+      </form>
     </div>
   );
 };
 
-export default Registration;
+export default Register;
