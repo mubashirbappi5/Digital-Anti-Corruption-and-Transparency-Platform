@@ -6,15 +6,8 @@ const Navber = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, signOutUser } = useContext(Authcontext);
 
-  const handleLogOut = () => {
-    signOutUser()
-      .then(() => {
-        console.log("doneee!");
-      })
-      .catch((error) => {
-        z; 
-      });
-  };
+  
+ 
   const links = (
     <>
       <Link className="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -57,6 +50,7 @@ const Navber = () => {
       </Link>
     </>
   );
+
   return (
     <div>
       <nav className="relative bg-[#8bb0ff] shadow dark:bg-gray-800">
@@ -123,22 +117,21 @@ const Navber = () => {
                 {links}
               </div>
 
-              <div className="flex items-center  mt-4 gap-2 lg:mt-0">
-                {user ? (
-                  <div>
-                    {/* <button onClick={handleLogOut} className="">Log OUT</button> */}
-                    <Link to={"/reportCorruption"} className="btn bg-green-200">
-                      Report
-                    </Link>
-                  </div>
-                ) : (
-                  <Link to={"/signup"} className="btn bg-blue-200">
-                    Login
-                  </Link>
-                )}
-              </div>
+            <div className="flex items-center  mt-4 gap-2 lg:mt-0">
+              
+          {
+            user?  <div>
+            <button onClick={handleLogOut} className="">Log OUT</button>
+            <Link to={'/reportCorruption'} className="btn bg-green-200">Report</Link>
+
+            </div>
+                : <Link to={'/signup'} className="btn bg-blue-200">Login</Link>
+          }
+
+             
             </div>
           </div>
+        </div>
         </div>
       </nav>
     </div>
