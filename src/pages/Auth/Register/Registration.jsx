@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import regiser from "../../../assets/register/Register.png";
 const Register = () => {
   const [user, setUser] = useState({ email: "", password: "", phone: "" });
   const navigate = useNavigate();
@@ -22,15 +22,53 @@ const Register = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h2 className="text-2xl font-bold mb-4">Register</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} className="border p-2" required />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} className="border p-2" required />
-        <input type="text" name="phone" placeholder="Phone Number" onChange={handleChange} className="border p-2" required />
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2">Register</button>
-      </form>
-    </div>
+    <section className="grid grid-cols-2 items-center ">
+      <div className="">
+        <img src={regiser} alt="Register image" />
+      </div>
+      <div className="w-1/2 mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Register</h2>
+        <form onSubmit={handleSubmit} className=" fieldset ">
+          <label className="fieldset-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            className="input"
+            required
+          />
+          <label className="fieldset-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={handleChange}
+            className="input"
+            required
+          />
+          <label className="fieldset-label">Phone</label>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            onChange={handleChange}
+            className="input"
+            required
+          />
+          <button type="submit" className="btn bg-blue-400 mt-4">
+            Register
+          </button>
+        </form>
+        <p className="px-6 text-sm text-center dark:text-gray-400">
+          {" "}
+          Don't have an account yet?
+          <Link className="text-blue-300" to={"/login"}>
+            Login
+          </Link>
+        </p>
+      </div>
+    </section>
   );
 };
 
