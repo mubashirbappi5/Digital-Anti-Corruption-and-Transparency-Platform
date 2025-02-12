@@ -20,6 +20,14 @@ const AuthProvider = ({children}) => {
         return updateProfile(auth.currentUser, profile);
       };
 
+      const resendVerificationEmail = async () => {
+        if (auth.currentUser) {
+            await sendEmailVerification(auth.currentUser);
+            alert("Verification email sent! Please check your inbox.");
+        }
+    };
+      
+
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) =>{
             setuser(currentUser)
@@ -42,6 +50,7 @@ const signOutUser = ()=>{
         user,
         updateuser,
         signOutUser,
+        resendVerificationEmail,
 
     }
     return (

@@ -1,25 +1,31 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import register from '../../../assets/register/Login.jpg'
+import useAuth from "../../../Hooks/useAuth";
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Login = () => {
-  const [user, setUser] = useState({ email: "", password: "" });
-  const navigate = useNavigate();
+  const{userSignIn } = useAuth()
 
-  const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const froms = location.state?.from?.pathname || "/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:7000/login", user);
-      localStorage.setItem("token", res.data.token);
-      alert("Login successful!");
-      navigate("/dashboard");
-    } catch (error) {
-      console.error(error);
-    }
+    const form = e.target 
+    const email = form.email.value
+    const password = form.password.value
+    userSignIn(email,password)
+    .then(res=>{
+      console.log(res.user)
+      navigate(froms, { replace: true });
+    })
+    .then(error=>{
+      console.log(error)
+    })
+  
   };
 
   return (
@@ -37,7 +43,7 @@ const Login = () => {
             type="email"
             name="email"
             placeholder="Email"
-            onChange={handleChange}
+          
             className="input"
             required
           />
@@ -46,14 +52,14 @@ const Login = () => {
             type="password"
             name="password"
             placeholder="Password"
-            onChange={handleChange} 
+          
             className="input"
             required
           />
           
-          <button type="submit" className="btn bg-blue-400 mt-4">
-            Login
-          </button>
+          <input type="submit" className="btn bg-blue-400 mt-4"/>
+         
+          
         </form>
         <p className="px-6 text-sm text-center dark:text-gray-400">
           {" "}
@@ -62,6 +68,7 @@ const Login = () => {
            Register
           </Link>
         </p>
+        <SocialLogin/>
       </div>
     </section>
    
