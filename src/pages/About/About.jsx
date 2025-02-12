@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Authcontext } from '../../AuthContext/AuthProvider';
-import bgImage from '../../assets/istockpho.jpg'
 import { useNavigate } from 'react-router-dom';
 const About = () => { 
   const {name} = useContext(Authcontext)

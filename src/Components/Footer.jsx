@@ -65,16 +65,16 @@ const Footer = () => {
                     About
                   </h3>
                   <a
-                    href="#"
+                    href="/resource"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Company
+                   Resource
                   </a>
                   <a
-                    href="#"
+                    href="/support"
                     className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                   >
-                    Community
+                    Support
                   </a>
                   <a
                     href="#"
