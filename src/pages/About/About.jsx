@@ -8,7 +8,7 @@ const About = () => {
         return (
           <div className="bg-blue-50 min-h-screen">
           {/* Hero Section */}
-          <section className="flex flex-col items-center justify-center text-center bg-blue-600 text-white py-20 px-6">
+          <section className="flex flex-col items-center justify-center text-center bg-blue-500 text-white py-20 px-6">
             <h1 className="text-5xl font-bold mb-4">Fighting Corruption, Building a Just Future</h1>
             <p className="text-lg max-w-2xl">
               Corruption thrives in darkness, but we stand as a beacon of light. Join us in the battle for transparency, accountability, and justice.  
